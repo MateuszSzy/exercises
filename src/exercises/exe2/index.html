@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <form id="form">
+                <div class="form-group">
+                    <label for="title">Tytuł książki</label>
+                    <input type="text" class="form-control" id="title" name="name" placeholder="Podaj tytuł książki">
+                    <p id="title__err"></p>
+                </div>
+                <div class="form-group">
+                    <label for="author">Autor książki</label>
+                    <input type="text" class="form-control" id="author" name="name" placeholder="Podaj autora książki">
+                    <p id="author__err"></p>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priorytet przeczytania: </label>
+                    <select id="priority" name="priority" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="categories">Kategorie książek: </label>
+                    <select id="categories" name="categories" >
+                        <option value="fantasy">Fantasy</option>
+                        <option value="crime">Crime</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" id="btn__add">Wyślij</button>
+                <div class="info-container">
+                    <div id="error-message" class="alert alert-danger d-none">
+                    </div>
+                    <div id="success-message" class="alert alert-success d-none">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <table class="table" id="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+
+</main>
+</body>
+<script src="js/form.js"></script>
+</html>
